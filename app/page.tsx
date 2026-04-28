@@ -1,169 +1,298 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function Home() {
   const exchanges = [
     {
-      rank: "01",
       name: "LBank",
-      rebate: "65%",
-      discount: "16%",
-      maker: "0.007%",
-      taker: "0.0175%",
+      rebate: "30%",
+      originalMaker: "0.02%",
+      maker: "0.014%",
+      originalTaker: "0.06%",
+      taker: "0.042%",
       tag: "Highest Rebate",
+      link: "https://lbank.com/ref/CHIMP",
     },
 
     {
-      rank: "02",
-      name: "Bitget",
-      rebate: "54%",
-      discount: "50%",
-      maker: "0.0092%",
-      taker: "0.0184%",
-      tag: "Top Exchange",
+      name: "WEEX",
+      rebate: "66.12%",
+      originalMaker: "0.02%",
+      maker: "0.0068%",
+      originalTaker: "0.06%",
+      taker: "0.02%",
+      tag: "Top Cashback",
+      link: "https://www.weex.com/en/register?vipCode=chimpp",
     },
 
     {
-      rank: "03",
       name: "MEXC",
       rebate: "50%",
-      discount: "Up to 50%",
-      maker: "Updating",
-      taker: "Updating",
+      originalMaker: "0%",
+      maker: "0%",
+      originalTaker: "0.02%",
+      taker: "0.01%",
       tag: "Popular",
+      link: "https://www.mexc.com/acquisition/custom-sign-up?shareCode=mexc-CHIMP",
+    },
+
+    {
+      name: "XT",
+      rebate: "65%",
+      originalMaker: "0.02%",
+      maker: "0.007%",
+      originalTaker: "0.06%",
+      taker: "0.021%",
+      tag: "High Rebate",
+      link: "https://www.xt.com/en/accounts/register?ref=CHIMP",
+    },
+
+    {
+      name: "Gate",
+      rebate: "50%",
+      originalMaker: "0.02%",
+      maker: "0.01%",
+      originalTaker: "0.05%",
+      taker: "0.025%",
+      tag: "Major Exchange",
+      link: "https://www.gate.com/share/CHIMPPPP",
+    },
+
+    {
+      name: "BYDFI",
+      rebate: "30%",
+      originalMaker: "0.02%",
+      maker: "0.014%",
+      originalTaker: "0.06%",
+      taker: "0.042%",
+      tag: "Partner",
+      link: "https://partner.bydfi.com/s/CHIMP888",
+    },
+
+    {
+      name: "BloFin",
+      rebate: "20%",
+      originalMaker: "0.02%",
+      maker: "0.016%",
+      originalTaker: "0.06%",
+      taker: "0.048%",
+      tag: "Trending",
+      link: "https://partner.blofin.com/d/CHIMPP",
     },
   ];
 
+  const events = [
+    {
+      exchange: "WEEX",
+      title: "New User Event",
+      description:
+        "Limited-time signup rewards and trading bonus campaigns.",
+    },
+
+    {
+      exchange: "MEXC",
+      title: "Trading Fee Campaign",
+      description:
+        "Special fee discounts and event rewards for active traders.",
+    },
+
+    {
+      exchange: "LBank",
+      title: "Deposit Reward Event",
+      description:
+        "Deposit campaigns and futures trading reward programs.",
+    },
+  ];
+
+  const [currentEvent, setCurrentEvent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentEvent((prev) => (prev + 1) % events.length);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [events.length]);
+
   return (
     <main className="min-h-screen bg-[#eef3ff] text-slate-950">
+
       {/* HEADER */}
 
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+
         <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
 
-          {/* LOGO */}
-
           <div className="flex items-center">
+
             <img
               src="/logo.png"
               alt="RebateMax Logo"
               className="h-20 w-auto object-contain"
             />
+
           </div>
 
-          {/* MENU */}
-
           <nav className="hidden gap-10 text-sm font-black text-slate-700 md:flex">
+
             <a href="#compare">Compare</a>
             <a href="#events">Events</a>
-            <a href="#faq">FAQ</a>
+
           </nav>
 
-          {/* BUTTON */}
+          <a
+            href="https://t.me/Alpha_JohnK"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-2xl bg-slate-950 px-7 py-4 text-sm font-black text-white transition hover:bg-slate-800"
+          >
+            Telegram Support
+          </a>
 
-          <button className="rounded-2xl bg-slate-950 px-7 py-4 text-sm font-black text-white transition hover:bg-slate-800">
-            Join Telegram
-          </button>
         </div>
+
       </header>
 
       {/* HERO */}
 
       <section className="mx-auto grid max-w-7xl gap-12 px-8 py-24 lg:grid-cols-2 lg:items-center">
 
+        {/* LEFT */}
+
         <div>
+
           <div className="mb-5 inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-black text-blue-700">
+
             CRYPTO EXCHANGE BENEFITS PLATFORM
+
           </div>
 
-          <h1 className="text-5xl font-black leading-tight tracking-tight md:text-7xl">
+          <h1 className="max-w-2xl text-4xl font-black leading-tight tracking-tight md:text-5xl lg:text-6xl">
+
             Compare crypto exchange rebates & referral benefits.
+
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
-            Find the best exchange referral codes, trading fee discounts,
-            rebate programs, and ongoing exchange events in one place.
+
+            Find the best exchange referral codes, fee discounts,
+            cashback programs, and ongoing exchange campaigns in one place.
+
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
-            <button className="rounded-2xl bg-blue-600 px-8 py-5 text-lg font-black text-white shadow-xl shadow-blue-200">
+            <a
+              href="#compare"
+              className="rounded-2xl bg-blue-600 px-8 py-5 text-center text-lg font-black text-white shadow-xl shadow-blue-200"
+            >
+
               Compare Exchanges
-            </button>
 
-            <button className="rounded-2xl bg-white px-8 py-5 text-lg font-black text-slate-900 shadow-lg">
+            </a>
+
+            <a
+              href="#events"
+              className="rounded-2xl bg-white px-8 py-5 text-center text-lg font-black text-slate-900 shadow-lg"
+            >
+
               View Events
-            </button>
+
+            </a>
+
           </div>
 
-          <p className="mt-5 text-sm text-slate-500">
-            * Exchange fees and event rewards may change depending on official exchange policies.
-          </p>
         </div>
 
-        {/* RIGHT CARD */}
+        {/* RIGHT EVENT SLIDER */}
 
-        <div className="rounded-[2.5rem] bg-white p-8 shadow-2xl shadow-blue-100">
+        <div className="overflow-hidden rounded-[2.5rem] bg-white p-8 shadow-2xl shadow-blue-100">
 
-          <div className="mb-8 flex items-center justify-between">
+          <div
+            className="flex transition-transform duration-700 ease-in-out"
+            style={{
+              transform: `translateX(-${currentEvent * 100}%)`,
+            }}
+          >
 
-            <div>
-              <p className="text-sm font-bold text-slate-400">
-                Featured Exchange
-              </p>
+            {events.map((event) => (
 
-              <h2 className="text-3xl font-black">
-                LBank
-              </h2>
-            </div>
+              <div
+                key={event.exchange}
+                className="min-w-full"
+              >
 
-            <div className="rounded-full bg-green-100 px-5 py-2 text-sm font-black text-green-700">
-              Active
-            </div>
+                <div className="mb-6 flex items-center justify-between">
+
+                  <div>
+
+                    <p className="text-sm font-black text-blue-600">
+
+                      EXCHANGE EVENT
+
+                    </p>
+
+                    <h2 className="mt-2 text-3xl font-black">
+
+                      {event.exchange}
+
+                    </h2>
+
+                  </div>
+
+                  <div className="rounded-full bg-green-100 px-5 py-2 text-sm font-black text-green-700">
+
+                    Active
+
+                  </div>
+
+                </div>
+
+                <div className="rounded-3xl bg-slate-100 p-7">
+
+                  <h3 className="text-2xl font-black">
+
+                    {event.title}
+
+                  </h3>
+
+                  <p className="mt-5 leading-8 text-slate-600">
+
+                    {event.description}
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            ))}
+
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          {/* DOTS */}
 
-            <div className="rounded-3xl bg-slate-100 p-6">
-              <p className="text-sm font-bold text-slate-500">
-                Payback Rate
-              </p>
+          <div className="mt-8 flex justify-center gap-3">
 
-              <p className="mt-3 text-5xl font-black text-blue-600">
-                65%
-              </p>
-            </div>
+            {events.map((_, index) => (
 
-            <div className="rounded-3xl bg-slate-100 p-6">
-              <p className="text-sm font-bold text-slate-500">
-                Trading Discount
-              </p>
+              <button
+                key={index}
+                onClick={() => setCurrentEvent(index)}
+                className={`h-3 w-3 rounded-full transition ${
+                  currentEvent === index
+                    ? "bg-blue-600"
+                    : "bg-slate-300"
+                }`}
+              />
 
-              <p className="mt-3 text-5xl font-black text-blue-600">
-                16%
-              </p>
-            </div>
+            ))}
 
-            <div className="rounded-3xl bg-blue-600 p-6 text-white">
-
-              <p className="text-sm font-bold text-blue-100">
-                Maker Fee
-              </p>
-
-              <p className="mt-3 text-4xl font-black">
-                0.007%
-              </p>
-            </div>
-
-            <div className="rounded-3xl bg-slate-950 p-6 text-white">
-
-              <p className="text-sm font-bold text-slate-300">
-                Taker Fee
-              </p>
-
-              <p className="mt-3 text-4xl font-black">
-                0.0175%
-              </p>
-            </div>
           </div>
+
         </div>
+
       </section>
 
       {/* TABLE */}
@@ -176,123 +305,129 @@ export default function Home() {
         <div className="mb-8">
 
           <p className="text-sm font-black text-blue-600">
+
             EXCHANGE COMPARISON
+
           </p>
 
           <h2 className="mt-2 text-4xl font-black">
+
             Fee Rebate Comparison
+
           </h2>
+
         </div>
 
         <div className="overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-blue-100">
 
-          <div className="hidden grid-cols-6 border-b bg-slate-100 px-8 py-6 text-sm font-black text-slate-500 md:grid">
+          <div className="hidden grid-cols-5 border-b bg-slate-100 px-8 py-6 text-sm font-black text-slate-500 md:grid">
 
             <div>Exchange</div>
             <div>Rebate</div>
-            <div>Discount</div>
             <div>Maker</div>
             <div>Taker</div>
             <div>Tag</div>
+
           </div>
 
           {exchanges.map((item) => (
 
             <div
               key={item.name}
-              className="grid gap-4 border-b px-8 py-7 md:grid-cols-6 md:items-center"
+              className="grid gap-4 border-b px-8 py-7 md:grid-cols-5 md:items-center"
             >
 
-              <div>
-                <p className="text-xl font-black">
-                  {item.name}
-                </p>
+              {/* EXCHANGE */}
 
-                <p className="text-sm font-bold text-blue-600">
-                  #{item.rank}
-                </p>
+              <div>
+
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl font-black transition hover:text-blue-600"
+                >
+
+                  {item.name}
+
+                </a>
+
               </div>
+
+              {/* REBATE */}
 
               <div className="font-black text-blue-600">
+
                 {item.rebate}
+
               </div>
 
-              <div className="font-black">
-                {item.discount}
-              </div>
+              {/* MAKER */}
 
               <div className="font-black">
-                {item.maker}
+
+                <span className="text-slate-400 line-through">
+
+                  {item.originalMaker}
+
+                </span>
+
+                <span className="mx-2 text-slate-400">
+
+                  →
+
+                </span>
+
+                <span className="text-blue-600">
+
+                  {item.maker}
+
+                </span>
+
               </div>
 
+              {/* TAKER */}
+
               <div className="font-black">
-                {item.taker}
+
+                <span className="text-slate-400 line-through">
+
+                  {item.originalTaker}
+
+                </span>
+
+                <span className="mx-2 text-slate-400">
+
+                  →
+
+                </span>
+
+                <span className="text-blue-600">
+
+                  {item.taker}
+
+                </span>
+
               </div>
+
+              {/* TAG */}
 
               <div>
+
                 <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-black text-slate-700">
+
                   {item.tag}
+
                 </span>
+
               </div>
+
             </div>
+
           ))}
+
         </div>
-      </section>
 
-      {/* EVENTS */}
-
-      <section
-        id="events"
-        className="bg-slate-950 py-24 text-white"
-      >
-
-        <div className="mx-auto max-w-7xl px-8">
-
-          <p className="text-sm font-black text-blue-400">
-            EXCHANGE EVENTS
-          </p>
-
-          <h2 className="mt-2 text-4xl font-black">
-            Ongoing Campaigns
-          </h2>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-
-            {[
-              [
-                "New User Rewards",
-                "Signup and KYC reward campaigns.",
-              ],
-
-              [
-                "Deposit Campaigns",
-                "Deposit and trading volume events.",
-              ],
-
-              [
-                "Fee Rebate Events",
-                "Trading fee rebate promotions.",
-              ],
-            ].map(([title, desc]) => (
-
-              <div
-                key={title}
-                className="rounded-[2rem] border border-white/10 bg-white/5 p-8"
-              >
-
-                <div className="mb-6 h-14 w-14 rounded-2xl bg-blue-600" />
-
-                <h3 className="text-2xl font-black">
-                  {title}
-                </h3>
-
-                <p className="mt-5 leading-8 text-slate-400">
-                  {desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* FOOTER */}
@@ -302,6 +437,7 @@ export default function Home() {
         RebateMax © 2026 — Crypto Exchange Benefit Platform
 
       </footer>
+
     </main>
   );
 }
