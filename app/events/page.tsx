@@ -18,7 +18,6 @@ export default function EventsPage() {
         "Rewards depend on eligibility and completion status.",
       ],
     },
-
     {
       exchange: "LBank",
       title: "New User Bonus Event",
@@ -32,7 +31,6 @@ export default function EventsPage() {
         "Some rewards may be limited by availability.",
       ],
     },
-
     {
       exchange: "BYDFi",
       title: "Up To 8,100 USDT Rewards",
@@ -46,7 +44,6 @@ export default function EventsPage() {
         "Rewards depend on completed requirements.",
       ],
     },
-
     {
       exchange: "Gate.io",
       title: "Exclusive New User Event",
@@ -60,7 +57,6 @@ export default function EventsPage() {
         "Limited-time campaign event.",
       ],
     },
-
     {
       exchange: "XT",
       title: "Task-Based New User Rewards",
@@ -74,7 +70,6 @@ export default function EventsPage() {
         "Reward amount depends on completed tasks.",
       ],
     },
-
     {
       exchange: "BloFin",
       title: "Mystery Box Reward Campaign",
@@ -94,40 +89,40 @@ export default function EventsPage() {
 
   return (
     <main className="min-h-screen bg-[#eef3ff]">
-      <header className="border-b bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
-          <Link href="/">
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-5">
+          <Link href="/" className="flex items-center">
             <img
               src="/logo.png"
               alt="RebateMax"
-              className="h-16 w-auto"
+              className="h-20 w-auto object-contain"
             />
           </Link>
 
           <Link
             href="/"
-            className="rounded-2xl bg-slate-950 px-7 py-4 text-sm font-black text-white transition hover:bg-slate-800"
+            className="ml-auto inline-flex w-[80px] items-center justify-center rounded-lg bg-slate-950 py-2 text-[12px] font-black leading-tight text-white transition hover:bg-slate-800 md:w-auto md:rounded-2xl md:px-7 md:py-4 md:text-sm"
           >
             Back Home
           </Link>
         </div>
       </header>
 
-      <section className="mx-auto max-w-7xl px-8 py-20">
+      <section className="mx-auto max-w-7xl px-4 py-10 md:px-8 md:py-20">
         <p className="text-sm font-black uppercase tracking-wider text-blue-600">
           Exchange Events
         </p>
 
-        <h1 className="mt-4 text-5xl font-black leading-tight text-slate-950">
+        <h1 className="mt-4 text-4xl font-black leading-tight text-slate-950 md:text-5xl">
           Active Exchange Campaigns
         </h1>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-          Check current exchange events, signup campaigns, trading rewards,
-          and rebate-related benefits from supported platforms.
+          Check current exchange events, signup campaigns, trading rewards, and
+          rebate-related benefits from supported platforms.
         </p>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
           {events.map((event) => (
             <button
               key={event.exchange}
@@ -163,20 +158,20 @@ export default function EventsPage() {
       {selectedEvent && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4 py-6 backdrop-blur-sm">
           <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-[2.5rem] bg-white p-8 shadow-2xl sm:p-12">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-black text-blue-600">
                   EXCHANGE EVENT
                 </p>
 
-                <h2 className="mt-3 text-5xl font-black">
+                <h2 className="mt-3 text-4xl font-black sm:text-5xl">
                   {selectedEvent.exchange}
                 </h2>
               </div>
 
               <button
                 onClick={() => setSelectedEvent(null)}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 text-3xl font-black text-slate-500 hover:bg-slate-200"
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-3xl font-black text-slate-500 hover:bg-slate-200"
               >
                 ×
               </button>
@@ -187,9 +182,7 @@ export default function EventsPage() {
                 Active Campaign
               </div>
 
-              <h3 className="text-3xl font-black">
-                {selectedEvent.title}
-              </h3>
+              <h3 className="text-3xl font-black">{selectedEvent.title}</h3>
 
               <p className="mt-5 leading-8 text-blue-50">
                 {selectedEvent.description}
@@ -200,20 +193,18 @@ export default function EventsPage() {
               <p className="text-xl font-black">Event Details</p>
 
               <ul className="mt-5 space-y-4">
-                {selectedEvent.details.map(
-                  (detail: string, index: number) => (
-                    <li
-                      key={detail}
-                      className="flex gap-4 rounded-2xl bg-white px-5 py-4 leading-7 text-slate-700"
-                    >
-                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-100 text-sm font-black text-blue-600">
-                        {index + 1}
-                      </span>
+                {selectedEvent.details.map((detail: string, index: number) => (
+                  <li
+                    key={detail}
+                    className="flex gap-4 rounded-2xl bg-white px-5 py-4 leading-7 text-slate-700"
+                  >
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-100 text-sm font-black text-blue-600">
+                      {index + 1}
+                    </span>
 
-                      <span>{detail}</span>
-                    </li>
-                  )
-                )}
+                    <span>{detail}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 

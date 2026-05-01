@@ -172,7 +172,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#eef3ff] text-slate-950">
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-5">
           <Link href="/" className="flex items-center">
             <img
               src="/logo.png"
@@ -188,17 +188,17 @@ export default function Home() {
           </nav>
 
           <a
-            href="https://t.me/Alpha_JohnK"
+            href="https://t.me/Alpha_Mica"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-2xl bg-slate-950 px-7 py-4 text-sm font-black text-white transition hover:bg-slate-800"
+            className="ml-auto inline-flex w-[80px] items-center justify-center pl-2 rounded-lg bg-slate-950 py-2 text-[12px] font-black leading-tight text-white transition hover:bg-slate-800 md:w-auto md:rounded-2xl md:px-7 md:py-4 md:text-sm"
           >
             Telegram Support
           </a>
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-8 py-24 lg:grid-cols-2 lg:items-center">
+      <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:px-8 md:py-24 lg:grid-cols-2 lg:items-center">
         <div>
           <div className="mb-5 inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-black text-blue-700">
             CRYPTO EXCHANGE BENEFITS PLATFORM
@@ -372,21 +372,47 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="font-black text-blue-600">{item.rebate}</div>
+<div className="flex items-center justify-between md:block">
+  <span className="text-sm font-black text-slate-500 md:hidden">
+    Rebate
+  </span>
 
-              <div className="flex flex-col font-black">
-                <span className="text-sm text-slate-400 line-through">
-                  {item.originalMaker}
-                </span>
-                <span className="mt-1 text-blue-600">{item.maker}</span>
-              </div>
+  <div className="font-black text-blue-600">
+    {item.rebate}
+  </div>
+</div>
 
-              <div className="flex flex-col font-black">
-                <span className="text-sm text-slate-400 line-through">
-                  {item.originalTaker}
-                </span>
-                <span className="mt-1 text-blue-600">{item.taker}</span>
-              </div>
+<div className="flex items-center justify-between md:block">
+  <span className="text-sm font-black text-slate-500 md:hidden">
+    Maker
+  </span>
+
+  <div className="flex flex-col font-black text-right md:text-left">
+    <span className="text-sm text-slate-400 line-through">
+      {item.originalMaker}
+    </span>
+
+    <span className="mt-1 text-blue-600">
+      {item.maker}
+    </span>
+  </div>
+</div>
+
+<div className="flex items-center justify-between md:block">
+  <span className="text-sm font-black text-slate-500 md:hidden">
+    Taker
+  </span>
+
+  <div className="flex flex-col font-black text-right md:text-left">
+    <span className="text-sm text-slate-400 line-through">
+      {item.originalTaker}
+    </span>
+
+    <span className="mt-1 text-blue-600">
+      {item.taker}
+    </span>
+  </div>
+</div>
             </div>
           ))}
         </div>
