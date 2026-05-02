@@ -114,7 +114,7 @@ export default function Home() {
       maker: "0%",
       originalTaker: "0.02%",
       taker: "0.01%",
-      link: "https://www.mexc.com/acquisition/custom-sign-up?shareCode=mexc-CHIMP",
+      link: "/mexc-referral-code",
     },
     {
       name: "XT",
