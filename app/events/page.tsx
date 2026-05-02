@@ -45,10 +45,10 @@ export default function EventsPage() {
       ],
     },
     {
-      exchange: "Gate.io",
+      exchange: "Gate",
       title: "Exclusive New User Event",
       description:
-        "Limited-time Gate.io campaign with bonus rewards available through the exclusive access link.",
+        "Limited-time Gate campaign with bonus rewards available through the exclusive access link.",
       link: "https://www.gate.com/campaigns/4678",
       details: [
         "Register and complete KYC tasks.",

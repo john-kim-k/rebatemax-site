@@ -45,10 +45,10 @@ export default function Home() {
       ],
     },
     {
-      exchange: "Gate.io",
+      exchange: "Gate",
       title: "Exclusive New User Event",
       description:
-        "Limited-time Gate.io campaign with bonus rewards available through the exclusive access link.",
+        "Limited-time Gate campaign with bonus rewards available through the exclusive access link.",
       link: "https://www.gate.com/campaigns/4678",
       details: [
         "Register and complete KYC to unlock trading bonus rewards.",
@@ -94,7 +94,7 @@ export default function Home() {
       maker: "0.014%",
       originalTaker: "0.06%",
       taker: "0.042%",
-      link: "https://lbank.com/ref/CHIMP",
+      link: "/lbank-referral-code",
     },
 {
   name: "WEEX",
@@ -124,7 +124,7 @@ export default function Home() {
       maker: "0.007%",
       originalTaker: "0.06%",
       taker: "0.021%",
-      link: "https://www.xt.com/en/accounts/register?ref=CHIMP",
+      link: "/xt-referral-code",
     },
     {
       name: "Gate",
@@ -134,7 +134,7 @@ export default function Home() {
       maker: "0.01%",
       originalTaker: "0.05%",
       taker: "0.025%",
-      link: "https://www.gate.com/share/CHIMPPPP",
+      link: "/gate-referral-code",
     },
     {
       name: "BYDFi",
@@ -144,7 +144,7 @@ export default function Home() {
       maker: "0.014%",
       originalTaker: "0.06%",
       taker: "0.042%",
-      link: "https://partner.bydfi.com/s/CHIMP888",
+      link: "/bydfi-referral-code",
     },
     {
       name: "BloFin",
@@ -154,7 +154,7 @@ export default function Home() {
       maker: "0.016%",
       originalTaker: "0.06%",
       taker: "0.048%",
-      link: "https://partner.blofin.com/d/CHIMPP",
+      link: "/blofin-referral-code",
     },
   ];
 
