@@ -176,7 +176,7 @@ export default function Home() {
           <Link href="/" className="flex items-center">
             <img
               src="/logo.png"
-              alt="RebateMax Logo"
+              alt="RebateMax crypto exchange fee rebate platform logo"
               className="h-20 w-auto object-contain"
             />
           </Link>
@@ -191,7 +191,7 @@ export default function Home() {
             href="https://t.me/Alpha_Mica"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-auto inline-flex w-[80px] items-center justify-center pl-2 rounded-lg bg-slate-950 py-2 text-[12px] font-black leading-tight text-white transition hover:bg-slate-800 md:w-auto md:rounded-2xl md:px-7 md:py-4 md:text-sm"
+            className="ml-auto inline-flex w-[80px] items-center justify-center rounded-lg bg-slate-950 py-2 pl-2 text-[12px] font-black leading-tight text-white transition hover:bg-slate-800 md:w-auto md:rounded-2xl md:px-7 md:py-4 md:text-sm"
           >
             Telegram Support
           </a>
@@ -201,16 +201,18 @@ export default function Home() {
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:px-8 md:py-24 lg:grid-cols-2 lg:items-center">
         <div>
           <div className="mb-5 inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-black text-blue-700">
-            CRYPTO EXCHANGE BENEFITS PLATFORM
+            CRYPTO EXCHANGE FEE REBATE PLATFORM
           </div>
 
           <h1 className="max-w-2xl text-4xl font-black leading-tight tracking-tight md:text-5xl lg:text-6xl">
-            Compare crypto exchange rebates & referral benefits.
+            Crypto exchange referral codes, fee rebates & self referral
+            benefits.
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
-            Find the best exchange referral codes, fee discounts, cashback
-            programs, and ongoing exchange campaigns in one place.
+            RebateMax helps traders compare crypto exchange referral codes,
+            trading fee rebates, self referral benefits, cashback offers, and
+            active exchange events in one place.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -218,14 +220,14 @@ export default function Home() {
               href="#compare"
               className="rounded-2xl bg-blue-600 px-8 py-5 text-center text-lg font-black text-white shadow-xl shadow-blue-200 transition hover:bg-blue-700"
             >
-              Compare Exchanges
+              Compare Fee Rebates
             </a>
 
             <Link
               href="/events"
               className="rounded-2xl bg-white px-8 py-5 text-center text-lg font-black text-slate-900 shadow-lg transition hover:bg-slate-50"
             >
-              View Events
+              View Exchange Events
             </Link>
           </div>
         </div>
@@ -241,7 +243,7 @@ export default function Home() {
                   key={event.exchange}
                   type="button"
                   onClick={() => setSelectedEvent(event)}
-                  className="block min-w-full max-w-full shrink-0 overflow-hidden cursor-pointer px-0 text-left"
+                  className="block min-w-full max-w-full shrink-0 cursor-pointer overflow-hidden px-0 text-left"
                 >
                   <div className="mb-6 flex items-center justify-between">
                     <div>
@@ -293,12 +295,14 @@ export default function Home() {
           <p className="text-sm font-black text-blue-400">ABOUT REBATEMAX</p>
 
           <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-black leading-tight md:text-5xl">
-            Higher exchange fee rebates through official partnerships.
+            Find official exchange referral links with trading fee rebate
+            benefits.
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            RebateMax helps traders access exchange signup links with fee rebate
-            benefits already applied.
+            RebateMax provides crypto exchange referral links, self referral
+            information, trading fee cashback details, and selected exchange
+            event updates for traders.
           </p>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -306,23 +310,26 @@ export default function Home() {
               <h3 className="text-2xl font-black">What is Fee Rebate?</h3>
               <p className="mt-5 leading-8 text-slate-300">
                 A fee rebate means part of your trading fees can be discounted
-                or returned depending on the exchange program.
+                or returned depending on the exchange program and referral
+                conditions.
               </p>
             </div>
 
             <div className="rounded-[2rem] bg-white/10 p-8 text-left">
-              <h3 className="text-2xl font-black">Official Partnerships</h3>
+              <h3 className="text-2xl font-black">Self Referral Benefits</h3>
               <p className="mt-5 leading-8 text-slate-300">
-                We work with exchange partner programs to provide higher rebate
-                benefits for traders.
+                Self referral and exchange rebate programs may help active
+                traders reduce trading costs through cashback or fee discount
+                structures.
               </p>
             </div>
 
             <div className="rounded-[2rem] bg-white/10 p-8 text-left">
               <h3 className="text-2xl font-black">Beginner Friendly</h3>
               <p className="mt-5 leading-8 text-slate-300">
-                Simply click an exchange and register through the connected
-                signup page with rebate benefits applied.
+                Click an exchange, register through the connected referral
+                page, and check the applied fee rebate or event benefits before
+                trading.
               </p>
             </div>
           </div>
@@ -332,12 +339,15 @@ export default function Home() {
       <section id="compare" className="mx-auto max-w-7xl px-8 py-24">
         <div className="mb-8">
           <p className="text-sm font-black text-blue-600">
-            EXCHANGE COMPARISON
+            EXCHANGE REBATE COMPARISON
           </p>
-          <h2 className="mt-2 text-4xl font-black">Fee Rebate Comparison</h2>
+          <h2 className="mt-2 text-4xl font-black">
+            Crypto Exchange Fee Rebate Comparison
+          </h2>
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-            Click on any exchange name below to open the signup page with rebate
-            benefits already applied.
+            Compare referral code benefits, maker and taker fee discounts,
+            cashback rates, and exchange rebate programs from selected crypto
+            exchanges.
           </p>
         </div>
 
@@ -364,7 +374,7 @@ export default function Home() {
                   <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100">
                     <img
                       src={item.logo}
-                      alt={`${item.name} logo`}
+                      alt={`${item.name} referral code and fee rebate`}
                       className="h-12 w-12 object-contain"
                     />
                   </span>
@@ -372,47 +382,41 @@ export default function Home() {
                 </a>
               </div>
 
-<div className="flex items-center justify-between md:block">
-  <span className="text-sm font-black text-slate-500 md:hidden">
-    Rebate
-  </span>
+              <div className="flex items-center justify-between md:block">
+                <span className="text-sm font-black text-slate-500 md:hidden">
+                  Rebate
+                </span>
 
-  <div className="font-black text-blue-600">
-    {item.rebate}
-  </div>
-</div>
+                <div className="font-black text-blue-600">{item.rebate}</div>
+              </div>
 
-<div className="flex items-center justify-between md:block">
-  <span className="text-sm font-black text-slate-500 md:hidden">
-    Maker
-  </span>
+              <div className="flex items-center justify-between md:block">
+                <span className="text-sm font-black text-slate-500 md:hidden">
+                  Maker
+                </span>
 
-  <div className="flex flex-col font-black text-right md:text-left">
-    <span className="text-sm text-slate-400 line-through">
-      {item.originalMaker}
-    </span>
+                <div className="flex flex-col text-right font-black md:text-left">
+                  <span className="text-sm text-slate-400 line-through">
+                    {item.originalMaker}
+                  </span>
 
-    <span className="mt-1 text-blue-600">
-      {item.maker}
-    </span>
-  </div>
-</div>
+                  <span className="mt-1 text-blue-600">{item.maker}</span>
+                </div>
+              </div>
 
-<div className="flex items-center justify-between md:block">
-  <span className="text-sm font-black text-slate-500 md:hidden">
-    Taker
-  </span>
+              <div className="flex items-center justify-between md:block">
+                <span className="text-sm font-black text-slate-500 md:hidden">
+                  Taker
+                </span>
 
-  <div className="flex flex-col font-black text-right md:text-left">
-    <span className="text-sm text-slate-400 line-through">
-      {item.originalTaker}
-    </span>
+                <div className="flex flex-col text-right font-black md:text-left">
+                  <span className="text-sm text-slate-400 line-through">
+                    {item.originalTaker}
+                  </span>
 
-    <span className="mt-1 text-blue-600">
-      {item.taker}
-    </span>
-  </div>
-</div>
+                  <span className="mt-1 text-blue-600">{item.taker}</span>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -488,7 +492,7 @@ export default function Home() {
       )}
 
       <footer className="border-t bg-white px-8 py-8 text-center text-sm font-medium text-slate-500">
-        RebateMax © 2026 — Crypto Exchange Benefit Platform
+        RebateMax © 2026 — Crypto Exchange Fee Rebate & Referral Code Platform
       </footer>
     </main>
   );
