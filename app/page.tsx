@@ -171,32 +171,32 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#eef3ff] text-slate-950">
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-5">
-          <Link href="/" className="flex items-center">
-            <img
-              src="/logo.png"
-              alt="RebateMax crypto exchange fee rebate platform logo"
-              className="h-20 w-auto object-contain"
-            />
-          </Link>
+<header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-5">
+    <Link href="/" className="flex shrink-0 items-center">
+      <img
+        src="/logo.png"
+        alt="RebateMax crypto exchange fee rebate platform logo"
+        className="h-20 w-auto object-contain"
+      />
+    </Link>
 
-          <nav className="hidden gap-10 text-sm font-black text-slate-700 md:flex">
-            <a href="#about">About</a>
-            <a href="#compare">Compare</a>
-            <Link href="/events">Events</Link>
-          </nav>
+    <nav className="hidden flex-1 justify-center gap-10 text-sm font-black text-slate-700 md:flex">
+      <a href="#about">About</a>
+      <a href="#compare">Compare</a>
+      <Link href="/events">Events</Link>
+    </nav>
 
-          <a
-            href="https://t.me/Alpha_Mica"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-auto inline-flex w-[80px] items-center justify-center rounded-lg bg-slate-950 py-2 pl-2 text-[12px] font-black leading-tight text-white transition hover:bg-slate-800 md:w-auto md:rounded-2xl md:px-7 md:py-4 md:text-sm"
-          >
-            Telegram Support
-          </a>
-        </div>
-      </header>
+    <a
+      href="https://t.me/Alpha_Mica"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-[80px] shrink-0 items-center justify-center rounded-lg bg-slate-950 py-2 pl-2 text-[12px] font-black leading-tight text-white transition hover:bg-slate-800 md:w-auto md:rounded-2xl md:px-7 md:py-4 md:text-sm"
+    >
+      Telegram Support
+    </a>
+  </div>
+</header>
 
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:px-8 md:py-24 lg:grid-cols-2 lg:items-center">
         <div>
@@ -359,10 +359,12 @@ export default function Home() {
             <div>Taker</div>
           </div>
 
-          {exchanges.map((item) => (
+          {exchanges.map((item, index) => (
             <div
               key={item.name}
-              className="grid gap-4 border-b px-8 py-7 md:grid-cols-4 md:items-center"
+              className={`grid gap-4 px-8 py-7 md:grid-cols-4 md:items-center ${
+  index !== exchanges.length - 1 ? "border-b" : ""
+}`}
             >
               <div>
                 <a
@@ -491,9 +493,31 @@ export default function Home() {
         </div>
       )}
 
-      <footer className="border-t bg-white px-8 py-8 text-center text-sm font-medium text-slate-500">
+<footer className="border-t border-slate-200 bg-white px-8 py-10">
+  <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
+    <div>
+      <p className="text-sm font-medium text-slate-500">
         RebateMax © 2026 — Crypto Exchange Fee Rebate & Referral Code Platform
-      </footer>
+      </p>
+    </div>
+
+    <div className="flex items-center gap-6">
+      <Link
+        href="/self-referral-crypto"
+        className="text-sm font-black text-slate-700 transition hover:text-blue-600"
+      >
+        Self Referral Guide
+      </Link>
+
+      <Link
+        href="/events"
+        className="text-sm font-black text-slate-700 transition hover:text-blue-600"
+      >
+        Exchange Events
+      </Link>
+    </div>
+  </div>
+</footer>
     </main>
   );
 }
