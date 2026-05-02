@@ -352,12 +352,12 @@ export default function Home() {
         </div>
 
         <div className="overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-blue-100">
-          <div className="hidden grid-cols-4 border-b bg-slate-100 px-8 py-6 text-sm font-black text-slate-500 md:grid">
-            <div>Exchange</div>
-            <div>Rebate</div>
-            <div>Maker</div>
-            <div>Taker</div>
-          </div>
+<div className="hidden grid-cols-4 border-b bg-slate-100 px-8 py-6 text-sm font-black text-slate-500 md:grid">
+  <div style={{ paddingLeft: "8px" }}>Exchange</div>
+  <div style={{ paddingLeft: "4px" }}>Rebate</div>
+  <div style={{ paddingLeft: "7px" }}>Maker</div>
+  <div style={{ paddingLeft: "10px" }}>Taker</div>
+</div>
 
           {exchanges.map((item, index) => (
             <div

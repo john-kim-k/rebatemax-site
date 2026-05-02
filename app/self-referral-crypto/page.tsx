@@ -32,7 +32,7 @@ export default function SelfReferralCryptoPage() {
 
           <Link
             href="/"
-            className="rounded-2xl bg-slate-950 px-5 py-3 text-sm font-black text-white"
+            className="rounded-2xl bg-slate-950 px-5 py-3 text-sm font-black text-white transition hover:bg-slate-800"
           >
             Back Home
           </Link>
@@ -95,6 +95,73 @@ export default function SelfReferralCryptoPage() {
             trading fee rebate programs, cashback offers, and exchange event
             opportunities in one place.
           </p>
+        </section>
+
+        <div style={{ height: "40px" }}></div>
+
+        <section>
+          <div className="mb-10">
+            <p className="text-lg font-black text-blue-600">FAQ</p>
+
+            <h2 className="mt-2 text-4xl font-black">
+              Frequently Asked Questions
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">
+              Common questions about crypto self referral, trading fee rebates,
+              cashback benefits, and exchange referral programs.
+            </p>
+          </div>
+
+          <div className="mt-4 grid gap-6">
+            <div className="rounded-[2rem] bg-white p-8 shadow-xl shadow-blue-100">
+              <h3 className="text-2xl font-black">
+                What is a crypto fee rebate?
+              </h3>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                A crypto fee rebate is a trading fee discount or cashback-style
+                benefit connected to exchange referral programs, partner
+                campaigns, or trading reward systems.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] bg-white p-8 shadow-xl shadow-blue-100">
+              <h3 className="text-2xl font-black">
+                How do exchange referral rebates work?
+              </h3>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Some exchanges provide referral-based rebate systems where
+                eligible users may receive reduced trading fees, cashback
+                benefits, or event rewards depending on the exchange policy.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] bg-white p-8 shadow-xl shadow-blue-100">
+              <h3 className="text-2xl font-black">
+                What is self referral in crypto?
+              </h3>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Self referral is commonly used to describe referral-related fee
+                rebate strategies or cashback structures within crypto exchange
+                partner systems.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] bg-white p-8 shadow-xl shadow-blue-100">
+              <h3 className="text-2xl font-black">
+                Are rebate percentages different on every exchange?
+              </h3>
+
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Yes. Trading fee rebate percentages, cashback benefits, and
+                referral rewards may vary depending on the exchange platform,
+                campaign terms, user region, and account eligibility.
+              </p>
+            </div>
+          </div>
         </section>
       </section>
     </main>
