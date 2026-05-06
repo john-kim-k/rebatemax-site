@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script"; // 👈 추가
 import "./globals.css";
 
 const geistSans = Geist({
@@ -50,27 +51,45 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-robots: {
-  index: true,
-  follow: true,
-},
+  robots: {
+    index: true,
+    follow: true,
+  },
 
-verification: {
-  google: "_d-1SAhWt1AIFcI_bqF-T8Cw8ZG4WSi3qPP3fLAvqb0",
-},
+  verification: {
+    google: "_d-1SAhWt1AIFcI_bqF-T8Cw8ZG4WSi3qPP3fLAvqb0",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      {/* 👇 여기 추가 */}
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XMGYKTSFN5"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XMGYKTSFN5');
+          `}
+        </Script>
+      </head>
+
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
