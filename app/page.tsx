@@ -49,7 +49,7 @@ export default function Home() {
       title: "Exclusive New User Event",
       description:
         "Limited-time Gate campaign with bonus rewards available through the exclusive access link.",
-      link: "https://www.gate.com/campaigns/4678",
+      link: "https://www.gate.com/campaigns/4776",
       details: [
         "Register and complete KYC to unlock trading bonus rewards.",
         "Deposit and trading volume tasks may qualify for payback rewards.",
