@@ -60,7 +60,7 @@ const eventData: Record<
     badge: "Exclusive Event",
     description:
       "Gate is running a limited-time new user campaign with additional rewards available through the event access link.",
-    eventLink: "https://www.gate.com/campaigns/4678",
+    eventLink: "https://www.gate.com/campaigns/4776",
     details: [
       "Event Period: Apr 27, 2026 15:00 UTC → May 6, 2026 15:00 UTC.",
       "Register and complete KYC to receive a 15 USDT trading bonus.",
