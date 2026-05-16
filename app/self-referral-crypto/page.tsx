@@ -21,7 +21,7 @@ export default function SelfReferralCryptoPage() {
   return (
     <main className="min-h-screen bg-[#eef3ff] text-slate-950">
       <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 md:px-8">
           <Link href="/">
             <img
               src="/logo.png"

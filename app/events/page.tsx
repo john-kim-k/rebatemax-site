@@ -89,24 +89,32 @@ export default function EventsPage() {
 
   return (
     <main className="min-h-screen bg-[#eef3ff]">
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8 md:py-5">
-          <Link href="/" className="flex items-center">
-            <img
-              src="/logo.png"
-              alt="RebateMax"
-              className="h-20 w-auto object-contain"
-            />
-          </Link>
+<header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 md:px-8 md:py-2">
+    <Link href="/" className="flex shrink-0 items-center">
+      <img
+        src="/logo.png"
+        alt="RebateMax crypto exchange fee rebate platform logo"
+        className="h-16 w-auto object-contain"
+      />
+    </Link>
 
-          <Link
-            href="/"
-            className="ml-auto inline-flex w-[80px] items-center justify-center rounded-lg bg-slate-950 py-2 text-[12px] font-black leading-tight text-white transition hover:bg-slate-800 md:w-auto md:rounded-2xl md:px-7 md:py-4 md:text-sm"
-          >
-            Back Home
-          </Link>
-        </div>
-      </header>
+    <nav className="hidden flex-1 justify-center gap-10 text-sm font-black text-slate-700 md:flex">
+      <Link href="/#about">About</Link>
+      <Link href="/#compare">Compare</Link>
+      <Link href="/events">Events</Link>
+    </nav>
+
+    <a
+      href="https://t.me/Alpha_Mica"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-[80px] shrink-0 items-center justify-center rounded-lg bg-slate-950 py-2 pl-2 text-[12px] font-black leading-tight text-white transition hover:bg-slate-800 md:w-auto md:rounded-2xl md:px-7 md:py-4 md:text-sm"
+    >
+      Telegram Support
+    </a>
+  </div>
+</header>
 
       <section className="mx-auto max-w-7xl px-4 py-10 md:px-8 md:py-20">
         <p className="text-sm font-black uppercase tracking-wider text-blue-600">
